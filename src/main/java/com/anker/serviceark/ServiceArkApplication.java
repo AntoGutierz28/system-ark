@@ -1,0 +1,14 @@
+package com.anker.serviceark;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
+
+@SpringBootApplication
+public class ServiceArkApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(ServiceArkApplication.class, args);
+	}
+
+}
