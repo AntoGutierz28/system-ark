@@ -4,9 +4,18 @@ spring:
   datasource:
     database-type: mysql
     url: ${db.url:jdbc:mysql://192.168.31.200:3306/ARK_DB}
-    driverClassName: com.mysql.jdbc.Driver
+    driverClassName: com.mysql.cj.jdbc.Driver
     username: ${db.username:root}
     password: ${db.password:12345678}
     minimum-idle: ${db.minimum-idle:1}
     maximum-pool-size: ${db.maximum-pool-size:1}
     default-schema: ARK_DB
+    validationQuery: SELECT 1
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    properties.hibernate:
+      dialect: org.hibernate.dialect.MySQL5Dialect
+      forma_sql: false
+    hibernate:
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
