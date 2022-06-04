@@ -36,8 +36,6 @@ public class PlateService extends AnkerService<Plate, PlateDto, Integer> {
             throw new RuntimeException();
         }
         TypePlate typeBo = typePlateRepository.findById(plateDto.getType().getId()).get();
-//        TypePlate typeBo = new TypePlate();
-//        BeanUtils.copyProperties(plateDto.getType(), typeBo);
         bo.setType(typeBo);
         return bo;
     }
